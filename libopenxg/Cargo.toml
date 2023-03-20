@@ -6,7 +6,6 @@ license = "GPL-3.0"
 description = "libopenxg is a library that logs into Sophos XG Firewalls as a user. It's used by https://github.com/Alex-Programs/openxgauthenticator"
 homepage = "https://github.com/Alex-Programs/libopenxg"
 repository = "https://github.com/Alex-Programs/libopenxg"
-readme = "README.md"
 keywords = ["api", "protocol", "client", "firewall"]
 categories = ["api-bindings"]
 

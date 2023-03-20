@@ -1,6 +1,6 @@
 [package]
 name = "libopenxg"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "GPL-3.0"
 description = "libopenxg is a library that logs into Sophos XG Firewalls as a user. It's used by https://github.com/Alex-Programs/openxgauthenticator"

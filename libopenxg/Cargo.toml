@@ -1,6 +1,6 @@
 [package]
 name = "libopenxg"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "GPL-3.0"
 description = "libopenxg is a library that logs into Sophos XG Firewalls as a user. It's used by https://github.com/Alex-Programs/openxgauthenticator"
@@ -8,6 +8,7 @@ homepage = "https://github.com/Alex-Programs/libopenxg"
 repository = "https://github.com/Alex-Programs/libopenxg"
 keywords = ["api", "protocol", "client", "firewall"]
 categories = ["api-bindings"]
+readme = "../README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

@@ -13,6 +13,8 @@ def login():
     print(data["a"])
     print(data["producttype"])
 
+    print(request.headers.get("User-Agent"))
+
     if data["mode"] == "191" and float(data["a"]) > time.time() - 10 and float(data["a"]) < time.time() + 10 and data[
         "producttype"] == "0":
         if data["username"] == "admin" and data["password"] == "adminpwd":

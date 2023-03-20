@@ -2,8 +2,9 @@ use reqwest;
 use std::collections::hash_map::HashMap;
 use std::fmt;
 use std::time::SystemTime;
+use const_format::formatcp;
 
-pub static DEFAULT_UA_SUFFIX: &str = "(Via libopenxg v0.9.0; Rust Reqwest; OS not shared; https://github.com/Alex-Programs/libopenxg)";
+pub static DEFAULT_UA_SUFFIX: &str = formatcp!("(Via libopenxg v{}; Rust Reqwest; OS not shared; https://github.com/Alex-Programs/libopenxg)", env!("CARGO_PKG_VERSION"));
 
 /// Request mode is an enum of the possible "modes" the firewall can take. I don't know why it's 191 or 192.
 #[derive(Debug, Copy, Clone, PartialEq)]
@@ -112,7 +113,7 @@ mod tests {
         let url = "http://127.0.0.1:8090".to_string();
         let username = "admin".to_string();
         let password = "adminpwd".to_string();
-        let user_agent = "user-agent".to_string();
+        let user_agent = DEFAULT_UA_SUFFIX.to_string();
 
         assert!(login(&url, &username, &password, &user_agent, &client).is_ok());
     }
@@ -125,7 +126,7 @@ mod tests {
 
         let url = "http://127.0.0.1:8090".to_string();
         let username = "admin".to_string();
-        let user_agent = "user-agent".to_string();
+        let user_agent = DEFAULT_UA_SUFFIX.to_string();
 
         assert!(keepalive(&url, &username, &user_agent, &client).is_ok());
     }
